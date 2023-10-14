@@ -98,7 +98,14 @@ function Footer() {
   console.log(isopen);
   return (
     <footer className="footer">
-      {new Date().toLocaleTimeString()} We're currently Open
+      {isopen && (
+        <div className="order">
+          <p>
+            We are open until {closeHour}:00 .Come visit us or order online.
+          </p>
+          <button className="btn"> order NOWWW!!! </button>
+        </div>
+      )}
     </footer>
   );
 }
